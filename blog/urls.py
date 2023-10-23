@@ -1,7 +1,8 @@
 
 from django.urls import path, include
-from single_pages import views
+from . import  views
 
 urlpatterns = [
+    path('<int:pk>/',views.single_post_page),
     path('', views.index)
 ]
