@@ -6,7 +6,7 @@ class PostList(ListView):
     model = Post
     ordering = '-pk'
 
-class PostDetail(DeleteView):
+class PostDetail(DetailView):
     model = Post
 # Create your views here.
 # def index(request):
