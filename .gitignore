@@ -2,3 +2,4 @@
 softeng_2023_prj/db.sqlite3
 blog/migrations
 *.sqlite3
+todo_list/todo_app/migrations
