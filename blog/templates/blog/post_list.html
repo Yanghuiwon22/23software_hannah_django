@@ -4,28 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <title>Blog</title>
-    <link rel="stylesheet" href="{%static 'blog/bootstrap/bootstrap.min.css'%}"
-media="screen">
+    <link rel="stylesheet" href="{% static 'blog/bootstrap/bootstrap.min.css' %}"
+          media="screen">
 </head>
 <body>
-    <h1>Blog</h1>
+
+    <h1>블로그 목록</h1>
 
 {% for p in post_list %}
-<!--    Blog Post  -->
-    <div class="card mb-4">
-        <img class="card-img-top" src="http://placehold.it/750X300" alt="Card image cap">
-        <div class="card-body">
-            <h2 class="card-title">{{ p.title }}</h2>
-            <p class="card-text">{{ p.content }} </p>
-            <a href="{{ p.get_absolute_url }}" class="btn btn-primary">Read More$rarr;</a>
-        </div>
-        <div class="card-footer text-muted">
-            Posted on {{ p.created_at }} by
-            <a href="#">작성자명 쓸 위치(개발예정)</a>
-        </div>
-    </div>
-ㄴ
+<hr/>
+    <h2><a href="{{p.get_absolute_url}}">{{p.title}}</a></h2>
+    <h4>{{p.created_at}}</h4>
+    <p>{{p.content}}</p>
 
+{#<div class="card mb-4">#}
+{#    <img class="card-img-top" src="http://placehold.it/750X300" alt="Card image cap">#}
+{#    <div class="card-body">#}
+{#        <h2 class = "card-title">{{p.title}}</h2>#}
+{#        <p class="card-text">{{p.content}}</p>#}
+{#        <a href="{{p.get_absolute_url}}" class="btn btn-primary">Read More &rarr;</a>#}
+{#    </div>#}
+{#    <div class="card-footer text-muted">#}
+{#        Posted on {{p.created_at}} by#}
+{#        <a href="#">양희원</a>#}
+{#    </div>#}
+{#</div>#}
 
 {% endfor %}
 </body>

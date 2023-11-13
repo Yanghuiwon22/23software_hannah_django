@@ -8,25 +8,14 @@ class PostList(ListView):
 
 class PostDetail(DetailView):
     model = Post
-# Create your views here.
-# def index(request):
-#     posts = Post.objects.all().order_by('-pk')
+#
+# def single_post_page(request, pk):
+#     post = Post.objects.get(pk=pk)
 #
 #     return render(
 #         request,
-#         'blog/post_list.html',
+#         'blog/single_post_page.html',
 #         {
-#             'posts' : posts,
+#             'post' : post,
 #         }
 #     )
-
-def single_post_page(request, pk):
-    post = Post.objects.get(pk=pk)
-
-    return render(
-        request,
-        'blog/single_post_page.html',
-        {
-            'post' : post,
-        }
-    )
